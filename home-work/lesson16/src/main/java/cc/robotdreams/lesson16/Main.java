@@ -2,15 +2,18 @@ package cc.robotdreams.lesson16;
 
 public class Main
 {
+    // Поле BankApplication
+
     static public void main(String[] args){
         /*
-            Створити обєкт типу BankApplication
-            Викликати метод process з наступними параметрами:
-            4.1 id = accountId000, amount 50, currency USD
-            4.2 id = accountId003, amount 250, currency HRV
-            4.3 id = accountId001, amount 50, currency EUR
-            4.4 id = accountId001, amount 50, currency USD
-            4.4 id = accountId001, amount 50, currency USD
+            Викликати метод processWrapper з наступними параметрами:
+            id = accountId000, amount 50, currency USD
+            id = accountId003, amount 250, currency HRV
+            id = accountId001, amount 50, currency EUR
+            id = accountId001, amount 50, currency USD
+            id = accountId001, amount 50, currency USD
          */
     }
+
+    // Метод processWrapper(String, int, String)
 }
