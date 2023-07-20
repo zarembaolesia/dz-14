@@ -13,6 +13,7 @@ public class Main
             id = accountId001, amount 50, currency USD
             id = accountId001, amount 50, currency USD
          */
+        // Some changes
     }
 
     // Метод processWrapper(String, int, String)
