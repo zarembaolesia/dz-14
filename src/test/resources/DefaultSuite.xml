@@ -2,7 +2,7 @@
 <suite  name="Suite" parallel="methods" thread-count="3" data-provider-thread-count="6">
     <test name="testNGTests">
         <packages>
-            <package name="cc.robotdreams.lesson20.*"></package>
+            <package name="cc.robotdreams.lesson20.*"/>
         </packages>
     </test> <!-- Test -->
 </suite> <!-- Suite -->
