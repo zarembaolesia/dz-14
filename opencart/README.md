@@ -7,7 +7,7 @@
 
 `docker-compose up -d`
 
-### Export database (Do this once after fresh run)
+### Export database ( :bangbang: Do this once after fresh run :bangbang: )
 
 1. Login to phphmyadmin: http://localhost:8000 with credentials
    - Username: `opencart`
