@@ -11,12 +11,12 @@ public class B_OpenClosed
     static public class Men extends Human
     {
         @Override
-        String getName() {
+        public String getName() {
             return "Male name";
         }
 
         @Override
-        String getGender() {
+        public String getGender() {
             return "Male";
         }
     }
@@ -24,12 +24,12 @@ public class B_OpenClosed
     static public class Woman extends Human
     {
         @Override
-        String getName() {
+        public String getName() {
             return "Female name";
         }
 
         @Override
-        String getGender() {
+        public String getGender() {
             return "Female";
         }
     }
