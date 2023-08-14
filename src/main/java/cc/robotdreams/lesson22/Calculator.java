@@ -92,8 +92,9 @@ public class Calculator
 
     public Integer calculate() {
         List<Object> calculation = new LinkedList<>(this.objects);
-
-        return (Integer) calcRecursively(calculation).get(0);
+        Integer result = (Integer) calcRecursively(calculation).get(0);
+        System.out.println("Calculation result: " + result);
+        return result;
     }
 
     private List<Object> calcRecursively(List<Object> objects) {
