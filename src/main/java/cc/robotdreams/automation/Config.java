@@ -75,15 +75,21 @@ public class Config
 
     static private Properties envProperties;
 
+    static private String environmentName;
+
     static private Properties getEnvProperties() {
         if (envProperties == null) {
             envProperties = new Properties();
-            String env = System.getProperty("env", "dev");
+            environmentName = System.getProperty("env", "dev");
             envProperties.putAll(getResourceProperties("common.properties"));
-            envProperties.putAll(getResourceProperties("env/" + env + ".properties"));
+            envProperties.putAll(getResourceProperties("env/" + environmentName + ".properties"));
             //envProperties.putAll(getResourceProperties("allure.properties"));
         }
         return envProperties;
+    }
+
+    static public String getEnvironmentName() {
+        return environmentName;
     }
 
     static private Properties getResourceProperties(String resourceFilePath) {

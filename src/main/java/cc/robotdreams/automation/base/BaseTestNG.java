@@ -1,5 +1,7 @@
 package cc.robotdreams.automation.base;
 
+import cc.robotdreams.automation.Config;
+import io.qameta.allure.Attachment;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.annotations.AfterMethod;
@@ -7,6 +9,10 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.lang.reflect.Method;
+import java.net.URI;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class BaseTestNG
 {
@@ -29,5 +35,20 @@ public class BaseTestNG
         logger.debug("---------------------------------------------------------------------------");
         logger.debug("-- End test: " + method.getAnnotation(Test.class).testName());
         logger.debug("---------------------------------------------------------------------------");
+        this.attachResourceFile("env/" + Config.getEnvironmentName() + ".properties");
+    }
+
+    @Attachment("Resource file: {resourceFilePath}")
+    private byte[] attachResourceFile(String resourceFilePath) {
+        try {
+            URI    uri      = ClassLoader.getSystemResource(resourceFilePath).toURI();
+            Path   path     = Paths.get(uri);
+            String content  = Files.readString(path);
+            //System.out.println(content);
+            return content.getBytes();
+        } catch (Throwable e) {
+            throw new RuntimeException(e);
+        }
+
     }
 }
