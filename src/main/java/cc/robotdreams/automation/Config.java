@@ -13,6 +13,11 @@ public class Config
 
     static final public Param HTTP_BASE_URL     = new Param("http.base.url",    "localhost", true);
     static final public Param HTTP_BASE_PORT    = new Param("http.base.port",   "8001",      true);
+    static final public Param MYSQL_HOST        = new Param("mysql.host",       null,        true);
+    static final public Param MYSQL_PORT        = new Param("mysql.port",       "3306",      true);
+    static final public Param MYSQL_DATABASE    = new Param("mysql.database",   null,        true);
+    static final public Param MYSQL_USERNAME    = new Param("mysql.username",   null,        true);
+    static final public Param MYSQL_PASSWORD    = new Param("mysql.password",   null,        true);
 
     static {
         InitErrors.showErrors();
