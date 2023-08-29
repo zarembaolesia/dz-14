@@ -53,12 +53,11 @@ public class Session
                 preferences.put("profile.password_manager_enabled", false);
                 options.setExperimentalOption("prefs", preferences);
                 options.setExperimentalOption("excludeSwitches", new String[]{"enable-automation", "load-extension"});
-                //if (Config.BROWSER_NO_GUI.isTrue()) {
-                //    options.addArguments("--headless");
-                //    options.addArguments("--no-sandbox");
-                //}
+                if (Config.WEB_BROWSER_NO_GUI.isTrue()) {
+                    options.addArguments("--headless");
+                    options.addArguments("--no-sandbox");
+                }
                 this._webdriver = new ChromeDriver(options);
-
             }
 
             this._webdriver.manage().window().maximize();

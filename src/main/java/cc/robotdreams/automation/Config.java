@@ -19,7 +19,8 @@ public class Config
     static final public Param MYSQL_USERNAME    = new Param("mysql.username",   null,        true);
     static final public Param MYSQL_PASSWORD    = new Param("mysql.password",   null,        true);
 
-    static final public Param WEB_BROWSER       = new Param("web.browser",   "chrome",       true);
+    static final public Param WEB_BROWSER           = new Param("web.browser",   "chrome",       true);
+    static final public Param WEB_BROWSER_NO_GUI    = new Param("web.browser.no.gui",   "false", true);
 
     static {
         InitErrors.showErrors();
