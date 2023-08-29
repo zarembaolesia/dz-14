@@ -4,7 +4,8 @@ services:
   web-server:
     build: .
     ports:
-      - "8001:80"
+      - "8001:80"   # 80 - http
+#      - "8002:443"  # 443 - https
     volumes:
       - ./src:/var/www/html/
       - ./storage:/var/www/storage/
