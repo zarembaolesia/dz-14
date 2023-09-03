@@ -6,8 +6,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
+import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 public class Session
 {
@@ -59,7 +61,7 @@ public class Session
                 }
                 this._webdriver = new ChromeDriver(options);
             }
-
+            this._webdriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
             this._webdriver.manage().window().maximize();
         }
 

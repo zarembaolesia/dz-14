@@ -10,7 +10,7 @@ public class BaseGUITest extends BaseTestNG
 {
     @BeforeMethod(alwaysRun = true)
     public void before() {
-        Session.get().webdriver().get(String.format("http://%s:%s",
+        this.wd().get(String.format("http://%s:%s",
                 Config.HTTP_BASE_URL.value,
                 Config.HTTP_BASE_PORT.value
         ));
